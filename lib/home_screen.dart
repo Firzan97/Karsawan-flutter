@@ -47,49 +47,60 @@ class HomeScreenState extends State<HomeScreen> {
                   height: 200.0,
                   width: 300.0,
                   decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.lightBlue[100],
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.grey,
+                          color: Colors.black,
                           offset: Offset(0.0, 2.0),
-                          blurRadius: 6.0,
+                          blurRadius: 9.0,
                         )
                       ],
                       borderRadius: BorderRadius.circular(20.0)),
-                  child: Column(
-                    children: <Widget>[
-                      Text(
-                        "Upcoming Event",
-                        style: TextStyle(
-                          fontSize: 30.00,
-                          fontWeight: FontWeight.w900,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 14.0),
+                    child: Column(
+                      children: <Widget>[
+                        Text(
+                          "Upcoming Event",
+                          style: TextStyle(
+                            fontSize: 30.00,
+                            fontWeight: FontWeight.w900,
+                          ),
                         ),
-                      ),
-                      SizedBox(height: 30.0),
-                      Text(
-                        " Name: KARSAWAN 4.0",
-                        style: TextStyle(
-                          fontSize: 14.00,
-                          fontWeight: FontWeight.w600,
+                        SizedBox(height: 30.0),
+                        Text(
+                          "Name: KARSAWAN 4.0                ",
+                          style: TextStyle(
+                            fontSize: 14.00,
+                            fontWeight: FontWeight.w600,
+                          ),
                         ),
-                      ),
-                      SizedBox(height: 10.0),
-                      Text(
-                        "Date: 20/4/2021 - 22/4/2021",
-                        style: TextStyle(
-                          fontSize: 14.00,
-                          fontWeight: FontWeight.w600,
+                        SizedBox(height: 10.0),
+                        Text(
+                          "Date: 20/4/2021                            ",
+                          style: TextStyle(
+                            fontSize: 14.00,
+                            fontWeight: FontWeight.w600,
+                          ),
                         ),
-                      ),
-                      SizedBox(height: 10.0),
-                      Text(
-                        "Time: 6.00PM - 12.00PM",
-                        style: TextStyle(
-                          fontSize: 14.00,
-                          fontWeight: FontWeight.w600,
+                        SizedBox(height: 10.0),
+                        Text(
+                          "Time: 6.00PM - 12.00PM             ",
+                          style: TextStyle(
+                            fontSize: 14.00,
+                            fontWeight: FontWeight.w600,
+                          ),
                         ),
-                      )
-                    ],
+                        SizedBox(height: 10.0),
+                        Text(
+                          "Venue: Medan Kolej, UiTM KJM",
+                          style: TextStyle(
+                            fontSize: 14.00,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
