@@ -4,6 +4,7 @@ import "package:flutter/material.dart";
 import 'package:karsawan/constant.dart';
 import 'package:karsawan/gallery.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 
 class HomeScreen extends StatefulWidget {
@@ -19,7 +20,7 @@ class HomeScreenState extends State<HomeScreen> {
 
   Future<void> _launched;
   String phoneNumber = "";
-  String _launchUrl = "https://www.google.com";
+  String _launchUrl = "https://forms.gle/XJhhQANVEAmSH4oAA";
 
   Future<void> _launchInBrowser(String url) async {
     if (await canLaunch(url)) {
@@ -51,7 +52,7 @@ class HomeScreenState extends State<HomeScreen> {
                 padding: const EdgeInsets.symmetric(vertical: 17.0),
                 child: Stack(
                     children: <Widget>[ Container(
-                      height: 200.0,
+                      height: 220.0,
                       width: 300.0,
                       decoration: BoxDecoration(
                           color: Colors.white,
@@ -107,24 +108,64 @@ class HomeScreenState extends State<HomeScreen> {
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
-                            RichText(
-                              text: TextSpan(
-                                  children: [TextSpan(
-                                      text: "If you interested, you can register ",
-                                      style: TextStyle(
-                                        color: Colors.grey,
-                                        fontWeight: FontWeight.w600,
-                                      )
-                                  )
-                                  ]
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 10),
+                              child: Row(
+                                children: <Widget>[
+                                  RichText(
+                                    text: TextSpan(
+                                        children: [TextSpan(
+                                            text: "If you interested, you can register ",
+                                            style: TextStyle(
+                                              color: Colors.grey,
+                                              fontWeight: FontWeight.w600,
+                                            )
+                                        ),
+                                        ]
+                                    ),
+                                  ),
+                                  MaterialButton(
+                                    minWidth: 30,
+                                    color: kPrimaryColor,
+                                    child: const Text('Here'),
+                                    onPressed: (){
+                                      _launchInBrowser(_launchUrl) ;
+                                    },
+                                  ),
+                                ],
                               ),
                             ),
-                            RaisedButton(
-                              child: const Text('Here'),
-                              onPressed: (){
-                               _launchInBrowser(_launchUrl) ;
-                              },
-                            )
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 10),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                children: <Widget>[
+                                  IconButton(
+                                    icon: Icon(FontAwesomeIcons.instagramSquare),
+                                    onPressed: () async {
+                                      const url = 'https://www.instagram.com/fskmuitmmelaka/';
+                                      if (await canLaunch(url)) {
+                                        await launch(url);
+                                      } else {
+                                        throw 'Could not launch $url';
+                                      }
+                                    },
+                                  ),
+                                  IconButton(
+                                    icon: Icon(FontAwesomeIcons.facebookSquare),
+                                    onPressed: () async {
+                                      const url =
+                                          'https://www.facebook.com/fskmuitmcawanganmelaka/';
+                                      if (await canLaunch(url)) {
+                                        await launch(url);
+                                      } else {
+                                        throw 'Could not launch $url';
+                                      }
+                                    },
+                                  ),
+                                ],
+                              ),
+                            ),
                           ],
                         ),
                       ),

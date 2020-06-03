@@ -10,7 +10,21 @@ List<ImageDetails> _images = [
   ImageDetails(imagePath: 'assets/images/f.jpg'),
   ImageDetails(imagePath: 'assets/images/g.jpg'),
   ImageDetails(imagePath: 'assets/images/h.jpg'),
-  ImageDetails(imagePath: 'assets/images/i.jpg')
+  ImageDetails(imagePath: 'assets/images/i.jpg'),
+  ImageDetails(imagePath: 'assets/images/j.jpg'),
+  ImageDetails(imagePath: 'assets/images/k.JPG'),
+  ImageDetails(imagePath: 'assets/images/l.JPG'),
+  ImageDetails(imagePath: 'assets/images/m.JPG'),
+  ImageDetails(imagePath: 'assets/images/n.JPG'),
+  ImageDetails(imagePath: 'assets/images/o.JPG'),
+  ImageDetails(imagePath: 'assets/images/p.JPG'),
+  ImageDetails(imagePath: 'assets/images/q.JPG'),
+  ImageDetails(imagePath: 'assets/images/r.JPG'),
+  ImageDetails(imagePath: 'assets/images/s.JPG'),
+  ImageDetails(imagePath: 'assets/images/t.JPG'),
+  ImageDetails(imagePath: 'assets/images/u.JPG'),
+  ImageDetails(imagePath: 'assets/images/v.JPG'),
+  ImageDetails(imagePath: 'assets/images/w.JPG')
 ];
 
 class Gallery extends StatelessWidget {
@@ -26,11 +40,11 @@ class Gallery extends StatelessWidget {
               height: 40.0,
             ),
             Text(
-              "Gallery",
+              "GALLERY",
               style: TextStyle(
-                fontSize: 25.0,
-                fontWeight: FontWeight.w600,
-                color: Colors.white,
+                fontSize: 30.0,
+                fontWeight: FontWeight.w900,
+                color: Colors.black,
               ),
               textAlign: TextAlign.center,
             ),
