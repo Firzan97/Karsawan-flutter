@@ -1,3 +1,3 @@
 # karsawan
-Flutter Interface for Karsawan event in UiTM JASIN
+Static flutter application for Karsawan event in UiTM JASIN
 
